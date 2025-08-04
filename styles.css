@@ -1,46 +1,64 @@
 :root {
-    --color-fondo-barra-nav: #819A91;
+
+    --color-titulos: #04364A;
+    /* menu de navegacion */
+
+    --color-fondo-barra-nav: #819a91;
     --color-letra: #ffffff;
-    --color-links: #EEEFE0;
-    --color-links-hover: #FFD586;
+    --color-links: #eeefe0;
+    --color-links-hover: #ffd586;
+
+    /* etiqueta producto */
+    --fondo-tarjeta-producto:#E4EFE7;
+    --fondo-etiqueta-nuevo:#41c7be;
+    --letra-descripcion: #555;
+    --fondo-botones: #519791;
+    --precios-antiguos: #383838;
+    --precio: #447c77;
+    
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*estilos para alinear el contenido horizontalmente y a la derecha*/
-nav {
-    background-color: var(--color-fondo-barra-nav); 
-    padding: 1rem 2rem; 
-    display: flex;
-    justify-content: space-between;/*espacio entre el logo, titulo y los link*/
-    align-items: center;
+body{
+    overflow: hidden;
 }
 
-/* Contenedor derecho (título y menú) */
+
+nav {
+    background-color: var(--color-fondo-barra-nav);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between; /* separa logo a la izquierda y contenido a la derecha */
+    align-items: flex-start;
+    width: 100%;
+}
+
+/*Situar el Logo a la izquierda */
+.nav__torta__logo {
+    height: 60px;
+    width: 60px;
+}
+
+/*Contenedor a la derecha */
 .nav__content {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.nav__torta__logo {
-    height: 60px;
-    width: 60px;
-}
-
-
-/* Estilo principal del bloque de navegación */
-h2{
+/* Título */
+h2 {
     color: var(--color-letra);
-    font-size: 1.5rem; 
-    margin-bottom: 1rem; 
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-/* Estilo de la lista del menú (elemento del bloque .nav) */
+/* Menú horizontal */
 .nav__list {
     list-style: none;
     display: flex;
@@ -48,16 +66,141 @@ h2{
     padding: 0;
 }
 
-/* Estilo para los enlaces del menú */
+/* Links */
 .nav__link {
     color: var(--color-links);
     text-decoration: none;
-    font-weight: 500;        
-    padding: 10px; 
-    transition: color 0.3s, border-bottom 0.3s;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.3s;
 }
 
-/* Estilo al pasar el cursor sobre el enlace */
 .nav__link:hover {
-    color: var(--color-links-hover);           
+    color: var(--color-links-hover);
+}
+
+
+/* 
+tarjeta productos */
+/* Contenedor de todas las tarjetas */
+.tarjetas-contenedor {
+    display: flex;
+    flex-wrap: nowrap;         
+    padding: 0;
+    margin: 0;
+    justify-content: space-evenly;
+}
+
+/* Tarjeta de producto individual */
+.tarjeta-producto {
+    background-color: var(--fondo-tarjeta-producto, #fff);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 280px;               
+    display: flex;
+    flex-direction: column;     
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px;                 
+    flex-shrink: 0;             /* evita que se comprima en scroll horizontal */
+}
+
+.tarjeta-producto:hover {
+    transform: scale(1.005);
+}
+
+.tarjeta-producto__etiqueta--nuevo {
+    align-self: flex-start;
+    padding: 4px 8px;
+    background-color: var(--fondo-etiqueta-nuevo, #ff6b6b);
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-producto__imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-producto__contenido {
+    text-align: center;
+    width: 100%;
+}
+
+.tarjeta-producto__titulo {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-titulos, #333);
+    margin: 10px 0 5px;
+}
+
+.tarjeta-producto__descripcion {
+    font-size: 13px;
+    color: var(--letra-descripcion, #666);
+    margin-bottom: 12px;
+}
+
+.tarjeta-producto__precios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.tarjeta-producto__precio {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--precio, #2e7d32);
+}
+
+.tarjeta-producto__precio-antiguo {
+    font-size: 14px;
+    padding: 5px;
+    text-decoration: line-through;
+    color: var(--precios-antiguos, #999);
+}
+
+.tarjeta-producto__boton {
+    background-color: var(--fondo-botones, #ff6b6b);
+    color: var(--color-letra, white);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta-producto__boton:hover {
+    background-color: var(--fondo-botones-hover, #e53935);
+}
+
+
+
+/* galeria de imagenes */
+
+.Galeria_de_imagenes{
+    height: 400px;
+    width: 1880px;
+    background-color: #4a7970;
+    display: flex;
+    flex-direction: row;     
+    align-items: center;
+    margin: 20px;
+
+}
+
+.galeria_productos__imagen{
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
 }
