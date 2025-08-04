@@ -1,0 +1,63 @@
+:root {
+    --color-fondo-barra-nav: #819A91;
+    --color-letra: #ffffff;
+    --color-links: #EEEFE0;
+    --color-links-hover: #FFD586;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*estilos para alinear el contenido horizontalmente y a la derecha*/
+nav {
+    background-color: var(--color-fondo-barra-nav); 
+    padding: 1rem 2rem; 
+    display: flex;
+    justify-content: space-between;/*espacio entre el logo, titulo y los link*/
+    align-items: center;
+}
+
+/* Contenedor derecho (título y menú) */
+.nav__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.nav__torta__logo {
+    height: 60px;
+    width: 60px;
+}
+
+
+/* Estilo principal del bloque de navegación */
+h2{
+    color: var(--color-letra);
+    font-size: 1.5rem; 
+    margin-bottom: 1rem; 
+}
+
+/* Estilo de la lista del menú (elemento del bloque .nav) */
+.nav__list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para los enlaces del menú */
+.nav__link {
+    color: var(--color-links);
+    text-decoration: none;
+    font-weight: 500;        
+    padding: 10px; 
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+/* Estilo al pasar el cursor sobre el enlace */
+.nav__link:hover {
+    color: var(--color-links-hover);           
+}
