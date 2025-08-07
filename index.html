@@ -28,7 +28,7 @@
     <div class="tarjetas-contenedor">
             <div class="tarjeta-producto">
                 <div class="tarjeta-producto__etiqueta tarjeta-producto__etiqueta--nuevo">NUEVO</div>
-                <img src="Imagenes/Tarjeta_producto_macarons.png" alt="macarons" class="tarjeta-producto__imagen" />
+                <img src="Imagenes/Producto_macarons.png" alt="macarons" class="tarjeta-producto__imagen" />
                 <div class="tarjeta-producto__contenido">
                     <h3 class="tarjeta-producto__titulo">Macarons surtidos</h3>
                     <p class="tarjeta-producto__descripcion">Pequeñas galletas rellenas de colores vivos y textura delicada.</p>
@@ -43,7 +43,7 @@
         <!-- TARJETA 2 - Chajá -->
             <div class="tarjeta-producto">
                 <div class="tarjeta-producto__etiqueta tarjeta-producto__etiqueta--nuevo">NUEVO</div>
-                <img src="Imagenes/Tarjeta_producto_chaja.png" alt="chaja" class="tarjeta-producto__imagen" />
+                <img src="Imagenes/Producto_chajá.png" alt="chaja" class="tarjeta-producto__imagen" />
                 <div class="tarjeta-producto__contenido">
                     <h3 class="tarjeta-producto__titulo">Postre Chajá</h3>
                     <p class="tarjeta-producto__descripcion">Bizcochuelo con merengue, crema y duraznos en almíbar.</p>
@@ -58,7 +58,7 @@
         <!-- TARJETA 3 - Cheesecake -->
             <div class="tarjeta-producto">
                 <div class="tarjeta-producto__etiqueta tarjeta-producto__etiqueta--nuevo">NUEVO</div>
-                <img src="Imagenes/Tarjeta_producto_cheese_cake.png" alt="cheesecake" class="tarjeta-producto__imagen" />
+                <img src="Imagenes/Producto_cheesecake.png" alt="cheesecake" class="tarjeta-producto__imagen" />
                 <div class="tarjeta-producto__contenido">
                     <h3 class="tarjeta-producto__titulo">Cheesecake de fresa</h3>
                     <p class="tarjeta-producto__descripcion">Tarta cremosa con base crocante y coulis de fresa.</p>
@@ -74,7 +74,7 @@
         <div class="tarjetas-contenedor">
             <div class="tarjeta-producto">
                 <div class="tarjeta-producto__etiqueta tarjeta-producto__etiqueta--nuevo">NUEVO</div>
-                <img src="Imagenes/Tarjeta_producto_skzoo.png" alt="macarons" class="tarjeta-producto__imagen" />
+                <img src="Imagenes/Producto_torta_skzoo.png" alt="macarons" class="tarjeta-producto__imagen" />
                 <div class="tarjeta-producto__contenido">
                     <h3 class="tarjeta-producto__titulo">Torta de skzoo</h3>
                     <p class="tarjeta-producto__descripcion">Torta con relleno frutal y diseños personalizados</p>
@@ -92,18 +92,60 @@
 
     <!-- galeria de imagenes -->
 
-    <div class="Galeria_de_imagenes">
-        <img src="Imagenes/Tarjeta_producto_macarons.png" alt="macarons" class="galeria_productos__imagen" />
-        <img src="Imagenes/Tarjeta_producto_chaja.png" alt="macarons" class="galeria_productos__imagen" />
-        <img src="Imagenes/Tarjeta_producto_cheese_cake.png" alt="macarons" class="galeria_productos__imagen" />
-        <img src="Imagenes/Tarjeta_producto_macarons.png" alt="macarons" class="galeria_productos__imagen" />
-        <img src="Imagenes/Tarjeta_producto_chaja.png" alt="macarons" class="galeria_productos__imagen" />
-        <img src="Imagenes/Tarjeta_producto_cheese_cake.png" alt="macarons" class="galeria_productos__imagen" />
+    <div class="Galeria_de_imagenes"> 
+        <h2 class="galeria_productos__titulo">Nuestros productos</h2> 
+        <div class="galeria_productos__contenedor">
+            <img src="Imagenes/Producto_macarons.png" class="galeria_productos__imagen" />
+            <img src="Imagenes/Producto_chajá.png" class="galeria_productos__imagen" />
+            <img src="Imagenes/Producto_cheesecake.png" class="galeria_productos__imagen" />
+            <img src="Imagenes/Producto_torta_skzoo.png" class="galeria_productos__imagen" />
+        </div>
     </div>
 
+   
+    <!-- Formulario de contacto -->
 
-    <!--  -->
-    
+    <form class="formulario-contacto"> 
+        <h2 class="formulario-contacto__titulo">Contáctanos</h2> 
+
+        <div class="formulario-contacto__fila">
+            <div class="formulario-contacto__campo">
+            <label for="nombre" class="formulario-contacto__label">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" class="formulario-contacto__input" placeholder="Stephany" required />
+            </div>
+
+            <div class="formulario-contacto__campo">
+            <label for="apellido" class="formulario-contacto__label">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" class="formulario-contacto__input" placeholder="Moreno" required />
+            </div>
+        </div>
+
+        <div class="formulario-contacto__fila">
+            <div class="formulario-contacto__campo">
+            <label for="email" class="formulario-contacto__label">Correo electrónico:</label>
+            <input type="email" id="email" name="email" class="formulario-contacto__input" placeholder="stephy@correo.com" required />
+            </div>
+
+            <div class="formulario-contacto__campo">
+            <label for="telefono" class="formulario-contacto__label">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" class="formulario-contacto__input" placeholder="3123456789" />
+            </div>
+        </div>
+
+        <div class="formulario-contacto__fila">
+            <div class="formulario-contacto__campo formulario-contacto__campo--completo">
+            <label for="mensaje" class="formulario-contacto__label">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" class="formulario-contacto__textarea" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+            </div>
+        </div>
+
+        <div class="formulario-contacto__fila formulario-contacto__fila--centrado">
+            <button type="submit" class="formulario-contacto__boton">Enviar</button>
+        </div>
+    </form>
+
+
+
 
 
 
