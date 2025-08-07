@@ -25,7 +25,7 @@
 }
 
 body{
-    overflow: hidden;
+    overflow: auto;
 }
 
 
@@ -185,22 +185,96 @@ tarjeta productos */
 
 
 
-/* galeria de imagenes */
-
-.Galeria_de_imagenes{
-    height: 400px;
-    width: 1880px;
+/* Galeria de imagenes */
+.Galeria_de_imagenes {
     background-color: #4a7970;
+    padding: 20px;
     display: flex;
-    flex-direction: row;     
-    align-items: center;
-    margin: 20px;
-
+    flex-direction: column;
 }
 
-.galeria_productos__imagen{
+.galeria_productos__contenedor {
+    display: flex;                 
+    flex-direction: row;
+    overflow-x: auto;              
+    gap: 20px;                     
+}
+
+.galeria_productos__imagen {
     height: 300px;
     width: 300px;
-    margin: 20px;
+    flex-shrink: 0;                
     border-radius: 10px;
+}
+
+/*Formulario de contacto*/
+
+.formulario-contacto {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #e4efe7;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+}
+
+.formulario-contacto__titulo {
+    font-size: 24px;
+    color: #04364A;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formulario-contacto__fila {
+    display: flex;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.formulario-contacto__campo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-contacto__campo--margen-izquierdo {
+    margin-left: 20px;
+}
+
+.formulario-contacto__campo--completo {
+    width: 70%;
+}
+
+.formulario-contacto__label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.formulario-contacto__input,
+.formulario-contacto__textarea {
+    padding: 10px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario-contacto__boton {
+    padding: 12px 25px;
+    background-color: #519791;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario-contacto__boton:hover {
+    background-color: #417b74;
+}
+
+.formulario-contacto__fila--centrado {
+    justify-content: center;
 }
