@@ -1,153 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Componentes flexbox</title>
+    <title>The Pastry House</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Sacramento&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <!-- Componente Menú de Navegación --> 
-    <!-- detalles de la barra de navegacion -->
-    <nav class="nav">
-        <img src="../Imagenes/logo_nav.png" class="nav__torta__logo" />
 
-        <div class="nav__content">
-            <h2>The Pastry House </h2>
-            <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link">Inicio</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Servicios</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Acerca de</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Contacto</a></li>
-            </ul>
+    <div class="layout-principal">
+
+        <aside class="sidebar-nav">
+            <nav class="sidebar-nav__menu">
+                <a href="#nav" class="sidebar-nav__item">Inicio</a>
+                <a href="#encabezado-seccion" class="sidebar-nav__item">Descuentos</a>
+                <a href="#galeria_de_imagenes" class="sidebar-nav__item">Galeria</a>
+                <a href="#precios" class="sidebar-nav__item">Planes</a>
+                <a href="#formulario-contacto" class="sidebar-nav__item">Contacto</a>
+            </nav>
+        </aside>
+
+        <div class="contenido-principal">
+            
+            <header>
+                <nav class="nav" id="nav">
+                    <img src="Imagenes/logo_nav.png" class="nav__torta__logo" alt="Logo The Pastry House">
+                    <div class="nav__content">
+                        <h1>The Pastry House</h1>
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#" class="nav__link">Inicio</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Servicios</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Acerca de</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Contacto</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <main>
+
+                <section class="encabezado-seccion" id="encabezado-seccion">
+                    <div class="encabezado-seccion__contenido">
+                        <span class="encabezado-seccion__icono">📦</span>
+                        <h2 class="encabezado-seccion__titulo">Nuestros Productos en descuento</h2>
+                    </div>
+                </section>
+
+                <section class="tarjetas-contenedor" id="tarjetas-contenedor">
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto__etiqueta tarjeta-producto__etiqueta--nuevo">NUEVO</div>
+                        <img src="Imagenes/Producto_macarons.png" alt="Macarons surtidos" class="tarjeta-producto__imagen">
+                        <div class="tarjeta-producto__contenido">
+                            <h3 class="tarjeta-producto__titulo">Macarons surtidos</h3>
+                            <p class="tarjeta-producto__descripcion">Pequeñas galletas rellenas de colores vivos y textura delicada.</p>
+                            <div class="tarjeta-producto__precios">
+                                <span class="tarjeta-producto__precio">$18.000</span>
+                                <span class="tarjeta-producto__precio-antiguo">$25.000</span>
+                            </div>
+                            <button class="tarjeta-producto__boton">Agregar al carrito</button>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-producto" >
+                        <div class="tarjeta-producto__etiqueta tarjeta-producto__etiqueta--nuevo">NUEVO</div>
+                        <img src="Imagenes/Producto_chajá.png" alt="Postre Chajá" class="tarjeta-producto__imagen">
+                        <div class="tarjeta-producto__contenido">
+                            <h3 class="tarjeta-producto__titulo">Postre Chajá</h3>
+                            <p class="tarjeta-producto__descripcion">Bizcochuelo con merengue, crema y duraznos en almíbar.</p>
+                            <div class="tarjeta-producto__precios">
+                                <span class="tarjeta-producto__precio">$22.000</span>
+                                <span class="tarjeta-producto__precio-antiguo">$29.000</span>
+                            </div>
+                            <button class="tarjeta-producto__boton">Agregar al carrito</button>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto__etiqueta tarjeta-producto__etiqueta--nuevo">NUEVO</div>
+                        <img src="Imagenes/Producto_cheesecake.png" alt="Cheesecake de fresa" class="tarjeta-producto__imagen">
+                        <div class="tarjeta-producto__contenido">
+                            <h3 class="tarjeta-producto__titulo">Cheesecake de fresa</h3>
+                            <p class="tarjeta-producto__descripcion">Tarta cremosa con base crocante y coulis de fresa.</p>
+                            <div class="tarjeta-producto__precios">
+                                <span class="tarjeta-producto__precio">$20.000</span>
+                                <span class="tarjeta-producto__precio-antiguo">$27.000</span>
+                            </div>
+                            <button class="tarjeta-producto__boton">Agregar al carrito</button>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-producto">
+                        <div class="tarjeta-producto__etiqueta tarjeta-producto__etiqueta--nuevo">NUEVO</div>
+                        <img src="Imagenes/Producto_torta_skzoo.png" alt="Torta de skzoo" class="tarjeta-producto__imagen">
+                        <div class="tarjeta-producto__contenido">
+                            <h3 class="tarjeta-producto__titulo">Torta de skzoo</h3>
+                            <p class="tarjeta-producto__descripcion">Torta con relleno frutal y diseños personalizados.</p>
+                            <div class="tarjeta-producto__precios">
+                                <span class="tarjeta-producto__precio">$18.000</span>
+                                <span class="tarjeta-producto__precio-antiguo">$25.000</span>
+                            </div>
+                            <button class="tarjeta-producto__boton">Agregar al carrito</button>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="Galeria_de_imagenes" id="galeria_de_imagenes">
+                    <h2 class="galeria_productos__titulo">Nuestros productos</h2>
+                    <div class="galeria_productos__contenedor">
+                        <img src="Imagenes/Producto_macarons.png" class="galeria_productos__imagen" alt="Macarons">
+                        <img src="Imagenes/Producto_chajá.png" class="galeria_productos__imagen" alt="Chajá">
+                        <img src="Imagenes/Producto_cheesecake.png" class="galeria_productos__imagen" alt="Cheesecake">
+                        <img src="Imagenes/Producto_torta_skzoo.png" class="galeria_productos__imagen" alt="Torta skzoo">
+                    </div>
+                </section>
+
+                <section class="precios" id="precios">
+                    <h2 class="precios__titulo">Nuestros Planes</h2>
+                    <div class="precios__contenedor">
+                        <div class="precios__tarjeta">
+                            <h3 class="precios__nombre">Básico</h3>
+                            <p class="precios__precio">$40.000</p>
+                            <ul class="precios__lista">
+                                <li class="precios__item">1 pastel de libra personalizado</li>
+                                <li class="precios__item">Entrega estándar</li>
+                            </ul>
+                            <button class="precios__boton">Comprar</button>
+                        </div>
+
+                        <div class="precios__tarjeta">
+                            <h3 class="precios__nombre">Premium</h3>
+                            <p class="precios__precio">$100.000</p>
+                            <ul class="precios__lista">
+                                <li class="precios__item">3 pasteles personalizados</li>
+                                <li class="precios__item">Entrega rápida</li>
+                                <li class="precios__item">Decoración especial</li>
+                            </ul>
+                            <button class="precios__boton">Comprar</button>
+                        </div>
+
+                        <div class="precios__tarjeta">
+                            <h3 class="precios__nombre">Deluxe</h3>
+                            <p class="precios__precio">$480.000</p>
+                            <ul class="precios__lista">
+                                <li class="precios__item">Pasteles ilimitados durante un año (max 10 pasteles)</li>
+                                <li class="precios__item">Entrega express</li>
+                                <li class="precios__item">Decoración exclusiva</li>
+                            </ul>
+                            <button class="precios__boton">Comprar</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="formulario-contacto">
+                    <form class="formulario-contacto">
+                        <h2 class="formulario-contacto__titulo">Contáctanos</h2>
+                        <div class="formulario-contacto__fila">
+                            <div class="formulario-contacto__campo">
+                                <label for="nombre" class="formulario-contacto__label">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" class="formulario-contacto__input" placeholder="Stephany" required>
+                            </div>
+                            <div class="formulario-contacto__campo">
+                                <label for="apellido" class="formulario-contacto__label">Apellido:</label>
+                                <input type="text" id="apellido" name="apellido" class="formulario-contacto__input" placeholder="Moreno" required>
+                            </div>
+                        </div>
+
+                        <div class="formulario-contacto__fila">
+                            <div class="formulario-contacto__campo">
+                                <label for="email" class="formulario-contacto__label">Correo electrónico:</label>
+                                <input type="email" id="email" name="email" class="formulario-contacto__input" placeholder="stephy@correo.com" required>
+                            </div>
+                            <div class="formulario-contacto__campo">
+                                <label for="telefono" class="formulario-contacto__label">Teléfono:</label>
+                                <input type="tel" id="telefono" name="telefono" class="formulario-contacto__input" placeholder="3123456789">
+                            </div>
+                        </div>
+
+                        <div class="formulario-contacto__fila">
+                            <div class="formulario-contacto__campo formulario-contacto__campo--completo">
+                                <label for="mensaje" class="formulario-contacto__label">Mensaje:</label>
+                                <textarea id="mensaje" name="mensaje" class="formulario-contacto__textarea" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="formulario-contacto__fila formulario-contacto__fila--centrado">
+                            <button type="submit" class="formulario-contacto__boton">Enviar</button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="lista-tareas" id="lista-tareas">
+                    <h3 class="lista-tareas__titulo">Tareas - The Pastry House</h3>
+                    <ul class="lista-tareas__contenedor" aria-label="Lista de tareas diarias">
+                        <li class="lista-tareas__item">Preparar masas</li>
+                        <li class="lista-tareas__item">Hornear tartas</li>
+                        <li class="lista-tareas__item">Montar y decorar pedidos</li>
+                        <li class="lista-tareas__item">Empacar productos</li>
+                        <li class="lista-tareas__item">Limpieza y cierre</li>
+                    </ul>
+                </section>
+
+                <section class="testimonial" id="testimonial">
+                    <img src="imagenes/avatar_hynin.png" alt="Foto del cliente" class="testimonial__avatar">
+                    <div class="testimonial__contenido">
+                        <p class="testimonial__texto">“Los pasteles son deliciosos, el servicio es excelente y siempre me sorprenden con nuevos sabores.”</p>
+                        <p class="testimonial__autor">— Sam Hwang</p>
+                    </div>
+                </section>
+
+            </main>
+
+            <footer class="footer" >
+                <div class="footer__columna">
+                    <h3 class="footer__titulo">Sobre nosotros</h3>
+                    <p class="footer__texto">Somos una pastelería artesanal comprometida con la calidad y el sabor.</p>
+                </div>
+                <div class="footer__columna">
+                    <h3 class="footer__titulo">Enlaces rápidos</h3>
+                    <ul class="footer__lista">
+                        <li class="footer__item"><a href="#" class="footer__enlace">Inicio</a></li>
+                        <li class="footer__item"><a href="#" class="footer__enlace">Productos</a></li>
+                        <li class="footer__item"><a href="#" class="footer__enlace">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer__columna">
+                    <h3 class="footer__titulo">Contacto</h3>
+                    <p class="footer__texto">Tel: 300 123 4567</p>
+                    <p class="footer__texto">Email: info@pasteleria.com</p>
+                </div>
+            </footer>
         </div>
-    </nav>
-
-    <!-- tarjetas producto -->
-        <!-- TARJETA 1 - Macarons -->
-    <div class="tarjetas-contenedor">
-            <div class="tarjeta-producto">
-                <div class="tarjeta-producto__etiqueta tarjeta-producto__etiqueta--nuevo">NUEVO</div>
-                <img src="Imagenes/Producto_macarons.png" alt="macarons" class="tarjeta-producto__imagen" />
-                <div class="tarjeta-producto__contenido">
-                    <h3 class="tarjeta-producto__titulo">Macarons surtidos</h3>
-                    <p class="tarjeta-producto__descripcion">Pequeñas galletas rellenas de colores vivos y textura delicada.</p>
-                    <div class="tarjeta-producto__precios">
-                        <span class="tarjeta-producto__precio">$18.000</span>
-                        <span class="tarjeta-producto__precio-antiguo">$25.000</span>
-                    </div>
-                    <button class="tarjeta-producto__boton">Agregar al carrito</button>
-                </div>
-            </div>
-
-        <!-- TARJETA 2 - Chajá -->
-            <div class="tarjeta-producto">
-                <div class="tarjeta-producto__etiqueta tarjeta-producto__etiqueta--nuevo">NUEVO</div>
-                <img src="Imagenes/Producto_chajá.png" alt="chaja" class="tarjeta-producto__imagen" />
-                <div class="tarjeta-producto__contenido">
-                    <h3 class="tarjeta-producto__titulo">Postre Chajá</h3>
-                    <p class="tarjeta-producto__descripcion">Bizcochuelo con merengue, crema y duraznos en almíbar.</p>
-                    <div class="tarjeta-producto__precios">
-                        <span class="tarjeta-producto__precio">$22.000</span>
-                        <span class="tarjeta-producto__precio-antiguo">$29.000</span>
-                    </div>
-                    <button class="tarjeta-producto__boton">Agregar al carrito</button>
-                </div>
-            </div>
-
-        <!-- TARJETA 3 - Cheesecake -->
-            <div class="tarjeta-producto">
-                <div class="tarjeta-producto__etiqueta tarjeta-producto__etiqueta--nuevo">NUEVO</div>
-                <img src="Imagenes/Producto_cheesecake.png" alt="cheesecake" class="tarjeta-producto__imagen" />
-                <div class="tarjeta-producto__contenido">
-                    <h3 class="tarjeta-producto__titulo">Cheesecake de fresa</h3>
-                    <p class="tarjeta-producto__descripcion">Tarta cremosa con base crocante y coulis de fresa.</p>
-                    <div class="tarjeta-producto__precios">
-                        <span class="tarjeta-producto__precio">$20.000</span>
-                        <span class="tarjeta-producto__precio-antiguo">$27.000</span>
-                    </div>
-                    <button class="tarjeta-producto__boton">Agregar al carrito</button>
-                </div>
-            </div>
-
-        <!-- TARJETA 1 - Macarons -->
-        <div class="tarjetas-contenedor">
-            <div class="tarjeta-producto">
-                <div class="tarjeta-producto__etiqueta tarjeta-producto__etiqueta--nuevo">NUEVO</div>
-                <img src="Imagenes/Producto_torta_skzoo.png" alt="macarons" class="tarjeta-producto__imagen" />
-                <div class="tarjeta-producto__contenido">
-                    <h3 class="tarjeta-producto__titulo">Torta de skzoo</h3>
-                    <p class="tarjeta-producto__descripcion">Torta con relleno frutal y diseños personalizados</p>
-                    <div class="tarjeta-producto__precios">
-                        <span class="tarjeta-producto__precio">$18.000</span>
-                        <span class="tarjeta-producto__precio-antiguo">$25.000</span>
-                    </div>
-                    <button class="tarjeta-producto__boton">Agregar al carrito</button>
-                </div>
-            </div>
-        </div>
-        
     </div>
-
-
-    <!-- galeria de imagenes -->
-
-    <div class="Galeria_de_imagenes"> 
-        <h2 class="galeria_productos__titulo">Nuestros productos</h2> 
-        <div class="galeria_productos__contenedor">
-            <img src="Imagenes/Producto_macarons.png" class="galeria_productos__imagen" />
-            <img src="Imagenes/Producto_chajá.png" class="galeria_productos__imagen" />
-            <img src="Imagenes/Producto_cheesecake.png" class="galeria_productos__imagen" />
-            <img src="Imagenes/Producto_torta_skzoo.png" class="galeria_productos__imagen" />
-        </div>
-    </div>
-
-   
-    <!-- Formulario de contacto -->
-
-    <form class="formulario-contacto"> 
-        <h2 class="formulario-contacto__titulo">Contáctanos</h2> 
-
-        <div class="formulario-contacto__fila">
-            <div class="formulario-contacto__campo">
-            <label for="nombre" class="formulario-contacto__label">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" class="formulario-contacto__input" placeholder="Stephany" required />
-            </div>
-
-            <div class="formulario-contacto__campo">
-            <label for="apellido" class="formulario-contacto__label">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" class="formulario-contacto__input" placeholder="Moreno" required />
-            </div>
-        </div>
-
-        <div class="formulario-contacto__fila">
-            <div class="formulario-contacto__campo">
-            <label for="email" class="formulario-contacto__label">Correo electrónico:</label>
-            <input type="email" id="email" name="email" class="formulario-contacto__input" placeholder="stephy@correo.com" required />
-            </div>
-
-            <div class="formulario-contacto__campo">
-            <label for="telefono" class="formulario-contacto__label">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" class="formulario-contacto__input" placeholder="3123456789" />
-            </div>
-        </div>
-
-        <div class="formulario-contacto__fila">
-            <div class="formulario-contacto__campo formulario-contacto__campo--completo">
-            <label for="mensaje" class="formulario-contacto__label">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" class="formulario-contacto__textarea" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
-            </div>
-        </div>
-
-        <div class="formulario-contacto__fila formulario-contacto__fila--centrado">
-            <button type="submit" class="formulario-contacto__boton">Enviar</button>
-        </div>
-    </form>
-
-
-
-
-
-
 </body>
 </html>
