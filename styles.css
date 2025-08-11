@@ -514,7 +514,6 @@ h3 {
     background-color: var(--color-boton-hover); 
     transform: translateY(-2px); 
 }
-
 .formulario-contacto__fila--centrado {
     justify-content: center; /* Centra horizontalmente los elementos */
     margin-top: 20px;
@@ -653,3 +652,4 @@ h3 {
 .footer__enlace:hover {
     color: var(--color-links-hover); 
 }
+
