@@ -58,20 +58,23 @@ h3 {
     text-align: center;
 }
 
-/* Layout principal */
+
 .layout-principal {
     display: flex;
     position: relative;
 }
 
-/* Ajusta el contenido principal para que no quede debajo del sidebar */
+
 .contenido-principal {
-    margin-left: 110px;  /* Mismo ancho que el sidebar */
+    margin-left: 110px;
     flex-grow: 1;
     overflow-x: hidden;
 }
 
-/* Sidebar */
+    /* 10. SIDEBAR DE NAVEGACIÓN
+    Barra vertical fija a la izquierda.
+    Ítems distribuidos verticalmente con espacio uniforme. */
+
 .sidebar-nav {
     position: fixed;
     top: 0;
@@ -117,86 +120,107 @@ h3 {
     color: var(--color-links-hover);
 }
 
-/* Navegación principal */
+    /* 1. BARRA DE NAVEGACIÓN
+    Distribuye los elementos de forma horizontal usando flexbox.
+    El logo queda a la izquierda y el menú (lista de enlaces) a la derecha.
+    Aplica colores de fondo y efectos hover a los enlaces. */
+
+
+/*  Contenedor principal de la barra de navegación  */
 .nav {
-    background-color: var(--color-fondo-barra-nav);
-    padding: 1rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: var(--color-fondo-barra-nav); 
+    padding: 1rem 3rem; 
+    display: flex; /* Activa Flexbox para alinear los elementos horizontalmente */
+    justify-content: space-between; /* Separa los elementos a los extremos (izquierda y derecha) */
+    align-items: center; /* Centra verticalmente los elementos */
+    width: 100%; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
+/*  Logo dentro de la barra de navegación  */
 .nav__torta__logo {
-    height: 60px;
-    width: 60px;
+    height: 60px; 
+    width: 60px; 
 }
 
+/*  Contenedor que agrupa los elementos del lado derecho de la barra  */
 .nav__content {
-    display: flex;
-    align-items: center;
+    display: flex; 
+    align-items: center; /* Centra verticalmente el contenido */
 }
 
+/*  Lista de enlaces de navegación */
 .nav__list {
-    list-style: none;
-    display: flex;
-    margin-left: 2rem;
+    list-style: none; 
+    display: flex; /* Muestra los elementos de la lista en línea horizontal */
+    margin-left: 2rem; 
 }
 
+/*  Elemento individual dentro de la lista de navegación  */
 .nav__item {
-    margin: 0 10px;
+    margin: 0 10px; 
 }
 
+/*  Enlaces dentro de la barra de navegación  */
 .nav__link {
     color: var(--color-links);
     text-decoration: none;
     font-weight: 600;
-    padding: 10px;
-    transition: color 0.3s;
+    padding: 10px; 
+    transition: color 0.3s; 
 }
 
+/*  Efecto hover sobre los enlaces */
 .nav__link:hover {
-    color: var(--color-links-hover);
+    color: var(--color-links-hover); 
 }
 
-/* Encabezado secciones */
+
+    /* 5. ENCABEZADO DE SECCIÓN
+    Muestra un icono circular seguido de un título.
+    Alinea icono y texto verticalmente centrados. */
+
 .encabezado-seccion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0 20px;
+    display: flex; /* Usa Flexbox para alinear elementos en fila */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    margin: 40px 0 20px; 
 }
 
 .encabezado-seccion__contenido {
-    display: flex;
-    align-items: center;
+    display: flex; /* Los elementos hijos estarán en una fila */
+    align-items: center; /* Centra verticalmente el icono y el texto */
 }
 
 .encabezado-seccion__icono {
-    background-color: var(--color-icono-encabezado);
-    padding: 8px;
-    border-radius: 50%;
-    margin-right: 15px;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-titulos);
+    background-color: var(--color-icono-encabezado); 
+    padding: 8px; 
+    border-radius: 50%; 
+    margin-right: 15px; 
+    font-size: 15px; 
+    display: flex; /* Para centrar el icono dentro del círculo */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    color: var(--color-titulos); 
 }
+
 
 .encabezado-seccion__titulo {
-    font-size: 18px;
-    color: var(--color-titulos);
+    font-size: 18px; 
+    color: var(--color-titulos); 
 }
 
-/* Tarjetas producto */
+
+    /* 2. TARJETA DE PRODUCTO
+    Muestra imagen, descripción, precios y botón en una columna vertical.
+    Centra el contenido y aplica sombra, bordes redondeados y animación en hover. */
+
 .tarjetas-contenedor {
-    display: flex;
-    flex-wrap: nowrap;
+    display: flex; /* Activa Flexbox para colocar las tarjetas en una misma línea */
+    flex-wrap: nowrap; /* Impide que las tarjetas pasen a otra fila, mantienen una sola línea horizontal */
     padding: 20px;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: center; /* Centra horizontalmente las tarjetas dentro del contenedor */
 }
 
 .tarjeta-producto {
@@ -206,11 +230,11 @@ h3 {
     transition: transform 0.3s ease;
     width: 280px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;/* Coloca los elementos (imagen, texto, botón) en columna */
     align-items: center;
     padding: 20px;
     margin: 20px;
-    flex-shrink: 0;
+    flex-shrink: 0;/* Evita que las tarjetas se reduzcan de tamaño al ajustar la pantalla */
 }
 
 .tarjeta-producto:hover {
@@ -257,8 +281,8 @@ h3 {
 
 .tarjeta-producto__precios {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centra horizontalmente los precios */
+    align-items: center; /* Alinea verticalmente los precios */
     margin-bottom: 12px;
 }
 
@@ -291,49 +315,56 @@ h3 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Galería */
+    /* 3. GALERÍA DE IMÁGENES
+    Muestra imágenes en fila horizontal con desplazamiento lateral (scroll).
+    Las imágenes tienen borde redondeado, sombra y efecto de zoom al pasar el mouse. */
+
 .Galeria_de_imagenes {
-    background-color: var(--color-fondo-barra-nav);
-    padding: 40px 20px;
-    text-align: center;
+    background-color: var(--color-fondo-barra-nav); 
+    padding: 40px 20px; 
+    text-align: center; 
 }
 
 .galeria_productos__titulo {
-    color: var(--color-titulos);
-    font-size: 18px;
-    margin-bottom: 20px;
+    color: var(--color-titulos); 
+    font-size: 18px; 
+    margin-bottom: 20px; 
 }
 
 .galeria_productos__contenedor {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    align-items: center;
-    padding: 10px 0;
-    margin: 20px auto;
-    max-width: 1200px;
+    display: flex; /* Activa Flexbox para alinear las imágenes en fila */
+    flex-direction: row; /* Coloca las imágenes en dirección horizontal */
+    overflow-x: auto; /* Permite desplazarse horizontalmente si hay más imágenes de las que caben */
+    align-items: center; /* Centra verticalmente las imágenes dentro del contenedor */
+    padding: 10px 0; 
+    margin: 20px auto; 
+    max-width: 1200px; 
 }
 
 .galeria_productos__imagen {
-    height: 250px;
-    width: 250px;
-    flex-shrink: 0;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 20px;
+    height: 250px; 
+    width: 250px; 
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan si el espacio es pequeño */
+    border-radius: 15px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    margin-right: 20px; 
 }
 
 .galeria_productos__imagen:last-child {
-    margin-right: 0;
+    margin-right: 0; 
 }
 
 .galeria_productos__imagen:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transform: scale(1.05); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
 }
 
-/* Precios sección */
+
+    /* 9. SECCIÓN DE PRECIOS
+    Muestra varias tarjetas en fila horizontal.
+    Centra y estira las tarjetas para que tengan igual altura. */
+
 .precios {
     padding: 40px 20px;
     background-color: #f8f8f8;
@@ -406,33 +437,37 @@ h3 {
     transform: translateY(-2px);
 }
 
-/* Formulario contacto */
+    /* 4. FORMULARIO DE CONTACTO
+    Distribuye campos en filas y columnas con flexbox.
+    Se adapta a pantallas pequeñas con flex-wrap. */
+
+
 .formulario-contacto {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 40px;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 800px; 
+    margin: 40px auto; 
+    padding: 40px; 
+    background-color: #f4f4f4; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
 }
 
 .formulario-contacto__titulo {
-    font-size: 18px;
-    color: var(--color-titulos);
+    font-size: 18px; 
+    color: var(--color-titulos); 
     margin-bottom: 20px;
     text-align: center;
 }
 
 .formulario-contacto__fila {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+    display: flex; /* Usa flexbox para alinear elementos en línea */
+    justify-content: space-between; /* Distribuye el espacio entre campos */
+    margin-bottom: 20px; 
+    flex-wrap: wrap; /* Permite que los campos se acomoden en varias líneas si no caben */
 }
 
 .formulario-contacto__campo {
-    flex-grow: 1;
-    display: flex;
+    flex-grow: 1; /* Permite que los campos crezcan para ocupar espacio disponible */
+    display: flex; /* Flexbox interno para alinear label e input en columna */
     flex-direction: column;
     margin-right: 20px;
 }
@@ -441,23 +476,24 @@ h3 {
     margin-right: 0;
 }
 
+
 .formulario-contacto__campo--completo {
-    flex: 1 1 100%;
+    flex: 1 1 100%; /* Ocupa 100% del ancho */
     margin-right: 0;
 }
 
 .formulario-contacto__label {
-    margin-bottom: 5px;
+    margin-bottom: 5px; 
     color: var(--color-letra-secundaria);
 }
 
 .formulario-contacto__input,
 .formulario-contacto__textarea {
-    width: 100%;
-    padding: 12px;
+    width: 100%; 
+    padding: 12px; 
     border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
+    border-radius: 8px; 
+    font-size: 1rem; 
 }
 
 .formulario-contacto__textarea {
@@ -466,8 +502,8 @@ h3 {
 
 .formulario-contacto__boton {
     padding: 12px 25px;
-    background-color: var(--color-fondo-botones);
-    color: white;
+    background-color: var(--color-fondo-botones); 
+    color: white; 
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -475,47 +511,50 @@ h3 {
 }
 
 .formulario-contacto__boton:hover {
-    background-color: var(--color-boton-hover);
-    transform: translateY(-2px);
+    background-color: var(--color-boton-hover); 
+    transform: translateY(-2px); 
 }
 
 .formulario-contacto__fila--centrado {
-    justify-content: center;
+    justify-content: center; /* Centra horizontalmente los elementos */
     margin-top: 20px;
 }
 
-/* Lista tareas */
+    /* 6. LISTA DE TAREAS
+    Muestra ítems en columna, centrados y con sombra.
+    Cada ítem tiene animación al pasar el mouse. */
+
 .lista-tareas {
-    padding: 40px 20px;
-    background-color: #f0f0f0;
+    padding: 40px 20px; 
+    background-color: #f0f0f0; 
 }
 
 .lista-tareas__titulo {
-    color: var(--color-titulos);
-    font-size: 20px;
-    margin-bottom: 20px;
+    color: var(--color-titulos); 
+    font-size: 20px; 
+    margin-bottom: 20px; 
 }
 
 .lista-tareas__contenedor {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 600px;
+    list-style: none; 
+    padding: 0; 
+    margin: 0 auto; /* Centrado horizontal */
+    display: flex; /* Usa flexbox para organizar elementos */
+    flex-direction: column; 
+    align-items: center; 
+    max-width: 600px; 
 }
 
 .lista-tareas__item {
-    width: 100%;
-    text-align: center;
-    padding: 15px 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    color: #444;
+    width: 100%; 
+    text-align: center; 
+    padding: 15px 20px; 
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
+    color: #444; 
     margin-bottom: 15px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
 }
 
 .lista-tareas__item:last-child {
@@ -523,61 +562,69 @@ h3 {
 }
 
 .lista-tareas__item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12); 
 }
 
-/* Testimonial */
+
+    /* 7. TESTIMONIAL
+    Presenta un avatar a la izquierda y el texto a la derecha.
+    Usa flexbox para alinear verticalmente. */
+
 .testimonial {
-    display: flex;
-    align-items: center;
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 25px;
-    background-color: var(--color-fondo-tarjeta-producto);
-    border-radius: 15px;
+    display: flex; /* Coloca la imagen y el texto en una fila horizontal */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    max-width: 700px; 
+    margin: 40px auto; 
+    padding: 25px; 
+    background-color: var(--color-fondo-tarjeta-producto); 
+    border-radius: 15px; 
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 .testimonial__avatar {
     width: 90px;
     height: 90px;
-    border-radius: 50%;
-    margin-right: 20px;
-    object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 50%; 
+    margin-right: 20px; 
+    object-fit: cover; /* Asegura que la imagen se recorte y rellene el contenedor */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
 }
 
 .testimonial__contenido {
-    flex: 1;
+    flex: 1; /* Ocupa todo el espacio restante en la fila */
 }
 
 .testimonial__texto {
-    font-style: italic;
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 8px;
+    font-style: italic; 
+    font-size: 1.1rem; 
+    color: #333; 
+    line-height: 1.6; 
+    margin-bottom: 8px; 
 }
 
 .testimonial__autor {
-    color: var(--color-titulos);
-    font-size: 1rem;
+    color: var(--color-titulos); 
+    font-size: 1rem; 
 }
 
-/* Footer */
+
+    /* 8. FOOTER
+    Divide el pie de página en tres columnas iguales.
+    Usa flexbox para la distribución y bordes entre columnas. */
+
 .footer {
-    display: flex;
-    justify-content: space-around;
-    background-color: var(--color-footer-fondo);
-    color: var(--color-footer-texto);
-    padding: 40px 20px;
-    height: 180px;
+    display: flex; /* Organiza las columnas en línea usando flexbox */
+    justify-content: space-around; /* Distribuye las columnas dejando espacios iguales entre ellas */
+    background-color: var(--color-footer-fondo); 
+    color: var(--color-footer-texto); 
+    padding: 40px 20px; 
+    height: 180px; 
 }
 
 .footer__columna {
-    flex: 1;
-    padding: 0 20px;
+    flex: 1; /* Ocupa el mismo espacio que las demás columnas */
+    padding: 0 20px; 
     border-right: 1px solid #4e342e;
 }
 
@@ -586,23 +633,23 @@ h3 {
 }
 
 .footer__titulo {
-    font-size: 18px;
-    color: var(--color-footer-titulo);
-    margin-bottom: 15px;
+    font-size: 18px; 
+    color: var(--color-footer-titulo); 
+    margin-bottom: 15px; 
 }
 
 .footer__texto,
 .footer__enlace {
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 15px; 
+    line-height: 1.5; 
 }
 
 .footer__enlace {
-    color: var(--color-footer-texto);
-    text-decoration: none;
-    transition: color 0.3s;
+    color: var(--color-footer-texto); 
+    text-decoration: none; 
+    transition: color 0.3s; 
 }
 
 .footer__enlace:hover {
-    color: var(--color-links-hover);
+    color: var(--color-links-hover); 
 }
